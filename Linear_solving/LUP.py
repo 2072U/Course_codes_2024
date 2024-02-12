@@ -23,7 +23,6 @@ def LUP(A):
             ok = 0
             break                                 # matrix is too close to singular, exit with error flag up
         if s != k-1:                              # if the pivot is not on the diagonal...
-            par = -par                            # change parity
             U = swap(U,s,k-1,n)                   # swap rows of U
             if k>1:                               # swap rows of L left of diagonal element
                 L = swap(L,s,k-1,k-1)
