@@ -10,6 +10,7 @@ import numpy as np
 
 # Note: indices i,j and k are used as matrix indeces (starting from 1) while s is used as python array index (starting from 0).
 def LUP(A):
+    A = A.astype(float)                           # Avoids integer arithmetic if the input array is accidentally specified with integer data type.
     small = 1e-12                                 # a pivot smaller than this will raise the error flag "ok=0"
     n = np.shape(A)[0]                            # extract matrix size
     U = np.copy(A)                                # copy content of A (avoid linking U and A through their pointers)
